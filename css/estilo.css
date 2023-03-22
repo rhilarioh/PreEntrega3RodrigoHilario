@@ -1,0 +1,149 @@
+body {
+  background-color: #212529; }
+  body .menu {
+    grid-area: menu;
+    color: antiquewhite; }
+  body .main {
+    grid-area: main;
+    color: antiquewhite; }
+  body .aside {
+    grid-area: aside;
+    padding: 10px;
+    color: antiquewhite; }
+  body .card {
+    color: #212529; }
+  body .contenidoN {
+    padding: 10px;
+    font-size: 25px; }
+  body .footer {
+    grid-area: footer;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: antiquewhite;
+    color: #212529; }
+    body .footer .infoContacto {
+      display: flex;
+      flex-direction: row;
+      padding: 10px; }
+      body .footer .infoContacto .TelMail {
+        width: 75%;
+        padding: 10px; }
+      body .footer .infoContacto .redes {
+        width: 25%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: inherit;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center; }
+        body .footer .infoContacto .redes img {
+          height: 50%;
+          width: 50%; }
+
+.container {
+  display: grid;
+  grid-template-columns: 6fr 2fr;
+  grid-template-rows: 0.5fr 8fr 0.5fr;
+  gap: 5px;
+  grid-auto-flow: row;
+  grid-template-areas: "menu menu" "main aside" "footer footer";
+  font-family: 'Chakra Petch', sans-serif; }
+
+.inicio {
+  margin: auto;
+  display: block;
+  padding: 50px; }
+  .inicio img {
+    margin: auto;
+    display: block;
+    margin-top: 15%; }
+
+.ancho {
+  padding: 20px;
+  height: 80%;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  object-position: center; }
+
+@media screen and (max-width: 850px) {
+  .container {
+    display: grid;
+    grid-template-columns: 6fr 2fr;
+    grid-template-rows: 0.1fr 2fr 1fr 0.1fr;
+    gap: 5px;
+    grid-auto-flow: row;
+    grid-template-areas: "menu menu" "main main" "aside aside" "footer footer"; }
+  .ancho {
+    width: 90%;
+    height: 95%; }
+  .inicio {
+    padding: 5px; }
+    .inicio img {
+      margin: auto;
+      display: block;
+      margin-top: 35%; } }
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 6fr;
+    grid-template-rows: 0.1fr 2fr 0.1fr 0.1fr;
+    gap: 5px;
+    grid-auto-flow: row;
+    grid-template-areas: "menu menu" "main main" "aside aside" "footer footer"; }
+  .inicio {
+    padding: 5px; }
+    .inicio img {
+      margin: auto;
+      display: block;
+      margin-top: 25%; } }
+
+.nav-link:hover {
+  animation: animacion 0.2s linear 0.1s;
+  color: white; }
+
+@keyframes animacion {
+  0% {
+    transform: rotate(90deg); } }
+
+.logo:hover {
+  animation: animacion 0.2s linear 0.1s; }
+
+/*
+.pagina404{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    .imagen404{
+        width: 55%;
+    }
+    .mensaje404{
+        width: 45%;
+        padding: 10px;
+        font-size: large;
+        color: white;
+        font-size: 2rem;
+    }
+}
+*/
+.pagina404 {
+  display: grid;
+  grid-template-columns: 6fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 5px;
+  grid-auto-flow: row;
+  grid-template-areas: "imagen404  mensaje404" "imagen404  mensaje2404"; }
+  .pagina404 .mensaje404 {
+    padding-top: 20%;
+    padding-left: 20px;
+    grid-area: mensaje404;
+    color: white; }
+  .pagina404 .mensaje2404 {
+    padding-left: 20px;
+    grid-area: mensaje2404;
+    color: white; }
+  .pagina404 .imagen404 {
+    grid-area: imagen404; }
